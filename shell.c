@@ -44,6 +44,12 @@ int main(void)
 		}
 		args[i] = NULL;
 
+		if (strcmp(args[0], "exit") == 0)
+		{
+			free(buffer);
+			exit(EXIT_SUCCESS);
+		}
+
 		execute_command(args);
 
 	}
