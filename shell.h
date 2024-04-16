@@ -6,9 +6,11 @@
 #include <string.h>
 #include <unistd.h>
 
+#define ARG_MAX 512
 
-void read_command(char **buffer, size_t *size);
-void parse_command(char *command);
+void execute_command(char *args[]);
+
+
 
 #endif
 

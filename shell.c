@@ -17,6 +17,9 @@ int main(void)
 	char *buffer = NULL;
 	size_t bufsize = 0;
 	ssize_t characters_read;
+	char *token;
+	char *args[ARG_MAX];
+	int i;
 
 	while (1)
 	{
@@ -25,11 +28,24 @@ int main(void)
 
 		if (characters_read == -1)
 		{
-			fprintf(stderr, "Error: Failed to read input\n");
-			exit(EXIT_FAILURE);
+			printf("\n");
+			free(buffer);
+			exit(EXIT_SUCCESS);
 		}
 
-		parse_command(buffer);
+		buffer[strcspn(buffer, "\n")] = '\0';
+
+		token = strtok(buffer, " ");
+		i = 0;
+		while (token != NULL)
+		{
+			args[i++] = token;
+			token = strtok(NULL, " ");
+		}
+		args[i] = NULL;
+
+		execute_command(args);
+
 		free(buffer);
 	}
 	return (0);
