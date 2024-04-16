@@ -1,0 +1,27 @@
+.\" Manpage for simple_shell
+.TH simple_shell 1 "April 2024" "Version 1.0" "Simple Shell Manual"
+.SH NAME
+simple_shell \- a simple shell program for Linux
+
+.SH SYNOPSIS
+simple_shell [command]
+
+.SH DESCRIPTION
+simple_shell is a command-line interface that interprets commands entered by the user and executes them.
+
+.SH OPTIONS
+This shell does not currently support any options.
+
+.SH EXAMPLES
+To list files in the current directory:
+.PP
+.B simple_shell
+.BR " $ " ls
+
+.SH AUTHOR
+Sebastian Soto Vazquez <9042@holbertonstudents.com>
+John Lopez Cabrera <9043@holbertonstudents.com>
+
+.SH SEE ALSO
+sh(1), bash(1)
+
