@@ -46,7 +46,6 @@ int main(void)
 
 		execute_command(args);
 
-		free(buffer);
 	}
 	return (0);
 }
