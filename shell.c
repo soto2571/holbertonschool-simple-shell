@@ -21,9 +21,11 @@ int main(void)
 	char *args[ARG_MAX];
 	int i;
 
+	printf("You are now at Holberton simple shell by Sebastian & John\n");
+
 	while (1)
 	{
-		printf("$ ");
+		printf("HSJ$ ");
 		characters_read = getline(&buffer, &bufsize, stdin);
 
 		if (characters_read == -1)
