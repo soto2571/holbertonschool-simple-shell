@@ -37,7 +37,7 @@ int main(void)
 
 		remove_newline(buffer);
 
-		if (characters_read == 0)
+		if (characters_read <= 1)
 		{
 			free(buffer);
 			continue;
