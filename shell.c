@@ -35,7 +35,7 @@ int main(void)
 			exit(EXIT_SUCCESS);
 		}
 
-		buffer[strcspn(buffer, "\n")] = '\0';
+		remove_newline(buffer);
 
 		token = strtok(buffer, " ");
 		i = 0;
