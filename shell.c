@@ -17,7 +17,7 @@ int main(void)
 	char *buffer = NULL, *token, *args[ARG_MAX];
 	size_t bufsize = 0;
 	ssize_t characters_read;
-	int i;
+	int i, is_empty = 0, j;
 
 	while (1)
 	{
@@ -37,7 +37,16 @@ int main(void)
 
 		remove_newline(buffer);
 
-		if (characters_read <= 1)
+		for (j = 0; j < characters_read; j++)
+		{
+			if (!isspace(buffer[j]))
+			{
+				is_empty = 0;
+				break;
+			}
+		}
+
+		if (is_empty)
 		{
 			free(buffer);
 			continue;
