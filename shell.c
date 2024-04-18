@@ -37,6 +37,12 @@ int main(void)
 
 		remove_newline(buffer);
 
+		if (character_read == 0)
+		{
+			free(buffer)
+			continue;
+		}
+
 		token = strtok(buffer, " ");
 		i = 0;
 		while (token != NULL)
