@@ -21,12 +21,16 @@ int main(void)
 
 	while (1)
 	{
-		printf("HSJ$ ");
+		if (isatty(STDIN_FILENO))
+			printf("HSJ$ ");
+
 		characters_read = getline(&buffer, &bufsize, stdin);
 
 		if (characters_read == -1)
 		{
-			printf("\n");
+			if (isatty(STDIN_FILENO))
+				printf("\n");
+			
 			free(buffer);
 			exit(EXIT_SUCCESS);
 		}
