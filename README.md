@@ -1,2 +1,1 @@
-Our first time creating a shell
-
+Our first time creating a shell basic
