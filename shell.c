@@ -17,7 +17,7 @@ int main(void)
 	char *buffer = NULL, *token, *args[ARG_MAX];
 	size_t bufsize = 0;
 	ssize_t characters_read;
-	int i, is_empty = 0, j;
+	int i;
 
 	while (1)
 	{
@@ -36,21 +36,6 @@ int main(void)
 		}
 
 		remove_newline(buffer);
-
-		for (j = 0; j < characters_read; j++)
-		{
-			if (!isspace(buffer[j]))
-			{
-				is_empty = 0;
-				break;
-			}
-		}
-
-		if (is_empty)
-		{
-			free(buffer);
-			continue;
-		}
 
 		token = strtok(buffer, " ");
 		i = 0;
