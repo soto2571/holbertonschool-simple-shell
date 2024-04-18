@@ -14,11 +14,9 @@
 
 int main(void)
 {
-	char *buffer = NULL;
+	char *buffer = NULL, *token, *args[ARG_MAX];
 	size_t bufsize = 0;
 	ssize_t characters_read;
-	char *token;
-	char *args[ARG_MAX];
 	int i;
 
 	printf("You are now at Holberton simple shell by Sebastian & John\n");
