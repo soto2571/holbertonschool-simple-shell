@@ -19,8 +19,6 @@ int main(void)
 	ssize_t characters_read;
 	int i;
 
-	printf("You are now at Holberton simple shell by Sebastian & John\n");
-
 	while (1)
 	{
 		printf("HSJ$ ");
