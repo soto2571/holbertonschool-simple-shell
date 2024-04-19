@@ -14,26 +14,28 @@
 
 int main(void)
 {
-	char *buffer = NULL;
+	char *buffer = NULL, *token, *args[ARG_MAX];
 	size_t bufsize = 0;
 	ssize_t characters_read;
-	char *token;
-	char *args[ARG_MAX];
 	int i;
 
 	while (1)
 	{
-		printf("$ ");
+		if (isatty(STDIN_FILENO))
+			printf("HSJ$ ");
+
 		characters_read = getline(&buffer, &bufsize, stdin);
 
 		if (characters_read == -1)
 		{
-			printf("\n");
+			if (isatty(STDIN_FILENO))
+				printf("\n");
+			
 			free(buffer);
 			exit(EXIT_SUCCESS);
 		}
 
-		buffer[strcspn(buffer, "\n")] = '\0';
+		remove_newline(buffer);
 
 		token = strtok(buffer, " ");
 		i = 0;
@@ -44,9 +46,14 @@ int main(void)
 		}
 		args[i] = NULL;
 
+		if (strcmp(args[0], "exit") == 0)
+		{
+			free(buffer);
+			exit(EXIT_SUCCESS);
+		}
+
 		execute_command(args);
 
-		free(buffer);
 	}
 	return (0);
 }
