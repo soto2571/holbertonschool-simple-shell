@@ -1,0 +1,49 @@
+.TH MAN_1_SIMPLE_SHELL 1 "April 2024" "Version 1.0" "Simple Shell Manual"
+
+.SH NAME
+simple_shell \- a simple command-line shell program
+
+.SH SYNOPSIS
+simple_shell
+
+.SH DESCRIPTION
+simple_shell is a basic command-line shell program that allows users to interact with their operating system by executing commands. It provides a simple interface for running commands and scripts.
+
+.SH OPTIONS
+The simple_shell program does not accept any command-line options or arguments.
+
+.SH USAGE
+To use simple_shell, simply run the program from your command-line interface. Once launched, you will be presented with a prompt where you can enter commands. Press Enter after typing each command to execute it.
+
+.SH EXAMPLES
+To list files in the current directory:
+.PP
+.BR $ ls
+
+To change directory to the parent directory:
+.PP
+.BR $ cd ..
+
+.SH EXIT STATUS
+simple_shell returns 0 upon successful execution of a command. If an error occurs during command execution, a non-zero exit status may be returned.
+
+.SH AUTHORS
+simple_shell was written by [Your Name].
+
+.SH SEE ALSO
+.BR bash (1),
+.BR sh (1),
+.BR csh (1),
+.BR tcsh (1)
+
+.SH BUGS
+No known bugs.
+
+.SH COPYRIGHT
+This is free and unencumbered software released into the public domain.
+
+.SH AVAILABILITY
+The latest version of simple_shell can be found at [URL to your repository or download location].
+
+.SH NOTES
+Additional notes or information can be included here.
