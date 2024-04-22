@@ -9,6 +9,7 @@
 #define ARG_MAX 512
 
 void execute_command(char *args[]);
+void remove_newline(char *str);
 
 
 
