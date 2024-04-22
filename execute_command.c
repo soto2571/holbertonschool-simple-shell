@@ -10,6 +10,7 @@ void execute_command(char *args[])
 {
 	int status;
 	pid_t pid = fork();
+	int exit_status;
 
 	if (pid == -1)
 	{
@@ -34,6 +35,17 @@ void execute_command(char *args[])
 		perror("waitpid");
 		exit(EXIT_FAILURE);
 	}
+
+	if (WIFEXITED(status))
+	{
+		exit_status = WEXITSTATUS(status);
+
+	if (exit_status != 0)
+	{
+		fprintf(stderr, "Command failed with exit status %d\n", exit_status);
+		exit(exit_status);
 	}
+	}
+}
 }
 
