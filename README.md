@@ -12,13 +12,13 @@ Simple Shell is a basic command-line shell program written in C. It allows users
 1. **Compilation:** 
    - Compile the source code using a C compiler such as gcc:
      ```sh
-     gcc -o shell shell.c
+     gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
      ```
 
 2. **Execution:**
    - Run the compiled program:
      ```sh
-     ./shell
+     ./hsh
      ```
    - This will launch the simple shell program and present you with a prompt where you can enter commands.
 
@@ -32,13 +32,16 @@ Simple Shell is a basic command-line shell program written in C. It allows users
      ```
 
 4. **Exiting:**
-   - To exit the shell, press `Ctrl + C` or enter the `exit` command.
+   - To exit the shell, press `Ctrl + D` or enter the `exit` command.
 
 ## Files
 
 - `shell.c`: Source code for the simple shell program.
 - `shell.h`: Header file containing function declarations and definitions.
 - `README.md`: This file, providing information about the program.
+- `remove_newline.c`: Remove the new line for the shell.
+- `execute_command.c`: Execute important commands for the shell to run propietly.
+- `hsh`: Run the shell.
 
 ## Contributors
 

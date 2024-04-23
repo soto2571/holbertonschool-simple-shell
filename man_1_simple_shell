@@ -28,7 +28,7 @@ To change directory to the parent directory:
 simple_shell returns 0 upon successful execution of a command. If an error occurs during command execution, a non-zero exit status may be returned.
 
 .SH AUTHORS
-simple_shell was written by [Your Name].
+simple_shell was written by Sebastian Soto & John Lopez.
 
 .SH SEE ALSO
 .BR bash (1),
@@ -43,7 +43,6 @@ No known bugs.
 This is free and unencumbered software released into the public domain.
 
 .SH AVAILABILITY
-The latest version of simple_shell can be found at [URL to your repository or download location].
+The latest version of simple_shell can be found at https://github.com/soto2571/holbertonschool-simple_shell.
 
 .SH NOTES
-Additional notes or information can be included here.
